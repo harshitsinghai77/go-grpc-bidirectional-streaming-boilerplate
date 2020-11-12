@@ -12,3 +12,18 @@ Then, the server takes its time and relays the message back to the client, which
 and does something useful. Let us implement this.
 
 PS: Knowledge of Protobuff is required to understand and work with the repository.
+
+Install the dependencies
+
+```bash
+$ go get google.golang.org/grpc
+$ go get -u github.com/golang/protobuf/protoc-gen-go
+```
+
+GRPC has the following benefits over traditional HTTP/REST/JSON architecture:
+
+1. GRPC uses HTTP/2, which is a binary protocol
+2. Header compression is possible in HTTP/2, which means less overhead
+3. We can multiplex many requests on one connection
+4. Usage of protobufs for strict typing of data
+5. Streaming of requests or responses is possible instead of request/response transactions
