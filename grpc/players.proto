@@ -1,0 +1,14 @@
+syntax = "proto3";
+package protofiles;
+
+option go_package = "/protofiles";
+
+message Employee {
+    string id = 1;
+    string name = 2;
+    float salary = 3;
+}
+
+message Employees {
+    repeated Employee employees = 1;
+}
